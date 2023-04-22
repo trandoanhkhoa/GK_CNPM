@@ -1,1 +1,25 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLBD">
+  <DataContextMoniker Name="/QLBDDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8a30f841-d641-4212-b9ca-72663b1a9420" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/QLBDDataContext/tbl_Cauthu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be545136-4960-45f0-b710-d21bfb297f21" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="71af47ec-c668-4bf3-acbe-f102c6e08dc8" absoluteBounds="0.75, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/QLBDDataContext/tbl_Doi_Bong" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7ade72a-414d-491f-b218-a18ac24532d8" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.06814697265625); (3.5 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLBDDataContext/tbl_Doi_Bong/tbl_Doi_Bong_tbl_Cauthu" />
+      <nodes>
+        <classShapeMoniker Id="71af47ec-c668-4bf3-acbe-f102c6e08dc8" />
+        <classShapeMoniker Id="8a30f841-d641-4212-b9ca-72663b1a9420" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,1 +1,23 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_DOI_BONG" Class="QLBDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=QL_DOI_BONG;Integrated Security=True" SettingsObjectName="CNPM_DoAn_Nhom2.Properties.Settings" SettingsPropertyName="QL_DOI_BONGConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Cauthu" Member="tbl_Cauthus">
+    <Type Name="tbl_Cauthu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenCauthu" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Doi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoaiCauthu" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TongSoBanThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="tbl_Doi_Bong_tbl_Cauthu" Member="tbl_Doi_Bong" ThisKey="Doi" OtherKey="ID" Type="tbl_Doi_Bong" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Doi_Bong" Member="tbl_Doi_Bongs">
+    <Type Name="tbl_Doi_Bong">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten_Doi_Bong" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Ten_San_nha" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="tbl_Doi_Bong_tbl_Cauthu" Member="tbl_Cauthus" ThisKey="ID" OtherKey="Doi" Type="tbl_Cauthu" />
+    </Type>
+  </Table>
+</Database>

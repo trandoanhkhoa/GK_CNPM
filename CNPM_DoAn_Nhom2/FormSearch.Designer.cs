@@ -33,25 +33,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbcMain = new Guna.UI2.WinForms.Guna2TabControl();
             this.tbpDoibong = new System.Windows.Forms.TabPage();
-            this.tbpCauthu = new System.Windows.Forms.TabPage();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbDoibong = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.tbpCauthu = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvDoibong = new System.Windows.Forms.DataGridView();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiCauThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbDoibong = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.tbcMain.SuspendLayout();
             this.tbpDoibong.SuspendLayout();
             this.pnlContainer.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoibong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,20 +98,10 @@
             this.tbpDoibong.Text = "Tra cứu đội bóng";
             this.tbpDoibong.UseVisualStyleBackColor = true;
             // 
-            // tbpCauthu
-            // 
-            this.tbpCauthu.Location = new System.Drawing.Point(184, 4);
-            this.tbpCauthu.Name = "tbpCauthu";
-            this.tbpCauthu.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCauthu.Size = new System.Drawing.Size(1015, 579);
-            this.tbpCauthu.TabIndex = 1;
-            this.tbpCauthu.Text = "Tra cứu cầu thủ";
-            this.tbpCauthu.UseVisualStyleBackColor = true;
-            // 
             // pnlContainer
             // 
+            this.pnlContainer.Controls.Add(this.dgvDoibong);
             this.pnlContainer.Controls.Add(this.panel3);
-            this.pnlContainer.Controls.Add(this.panel2);
             this.pnlContainer.Controls.Add(this.panel1);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(3, 3);
@@ -128,21 +120,63 @@
             this.panel1.Size = new System.Drawing.Size(1009, 60);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // label3
             // 
-            this.panel2.Controls.Add(this.dgvDoibong);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 60);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1009, 513);
-            this.panel2.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(11, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(285, 38);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tra cứu đội bóng";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(564, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Đội Bóng";
+            // 
+            // cbbDoibong
+            // 
+            this.cbbDoibong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbDoibong.BackColor = System.Drawing.Color.Transparent;
+            this.cbbDoibong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbDoibong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDoibong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDoibong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbDoibong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDoibong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbDoibong.ItemHeight = 30;
+            this.cbbDoibong.Location = new System.Drawing.Point(660, 12);
+            this.cbbDoibong.Name = "cbbDoibong";
+            this.cbbDoibong.Size = new System.Drawing.Size(249, 36);
+            this.cbbDoibong.TabIndex = 0;
+            this.cbbDoibong.SelectedIndexChanged += new System.EventHandler(this.cbbDoibong_SelectedIndexChanged);
+            // 
+            // tbpCauthu
+            // 
+            this.tbpCauthu.Location = new System.Drawing.Point(184, 4);
+            this.tbpCauthu.Name = "tbpCauthu";
+            this.tbpCauthu.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCauthu.Size = new System.Drawing.Size(1015, 579);
+            this.tbpCauthu.TabIndex = 1;
+            this.tbpCauthu.Text = "Tra cứu cầu thủ";
+            this.tbpCauthu.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtSearch);
+            this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 516);
+            this.panel3.Location = new System.Drawing.Point(0, 519);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1009, 57);
+            this.panel3.Size = new System.Drawing.Size(1009, 54);
             this.panel3.TabIndex = 2;
             // 
             // dgvDoibong
@@ -163,10 +197,11 @@
             this.CauThu,
             this.NgaySinh,
             this.LoaiCauThu,
+            this.Doi,
             this.Ghichu});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
@@ -175,7 +210,7 @@
             this.dgvDoibong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDoibong.EnableHeadersVisualStyles = false;
             this.dgvDoibong.GridColor = System.Drawing.Color.Silver;
-            this.dgvDoibong.Location = new System.Drawing.Point(0, 0);
+            this.dgvDoibong.Location = new System.Drawing.Point(0, 60);
             this.dgvDoibong.MultiSelect = false;
             this.dgvDoibong.Name = "dgvDoibong";
             this.dgvDoibong.RowHeadersWidth = 51;
@@ -185,7 +220,7 @@
             this.dgvDoibong.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDoibong.RowTemplate.Height = 24;
             this.dgvDoibong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDoibong.Size = new System.Drawing.Size(1009, 513);
+            this.dgvDoibong.Size = new System.Drawing.Size(1009, 459);
             this.dgvDoibong.TabIndex = 0;
             // 
             // stt
@@ -198,12 +233,14 @@
             // CauThu
             // 
             this.CauThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CauThu.DataPropertyName = "TenCauthu";
             this.CauThu.HeaderText = "Cầu thủ";
             this.CauThu.MinimumWidth = 6;
             this.CauThu.Name = "CauThu";
             // 
             // NgaySinh
             // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày sinh";
             this.NgaySinh.MinimumWidth = 6;
             this.NgaySinh.Name = "NgaySinh";
@@ -212,52 +249,49 @@
             // LoaiCauThu
             // 
             this.LoaiCauThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LoaiCauThu.DataPropertyName = "LoaiCauthu";
             this.LoaiCauThu.HeaderText = "Loại cầu thủ";
             this.LoaiCauThu.MinimumWidth = 6;
             this.LoaiCauThu.Name = "LoaiCauThu";
             // 
+            // Doi
+            // 
+            this.Doi.DataPropertyName = "Doi";
+            this.Doi.HeaderText = "Đội";
+            this.Doi.MinimumWidth = 6;
+            this.Doi.Name = "Doi";
+            this.Doi.Visible = false;
+            this.Doi.Width = 125;
+            // 
             // Ghichu
             // 
+            this.Ghichu.DataPropertyName = "GhiChu";
             this.Ghichu.HeaderText = "Ghi chú";
             this.Ghichu.MinimumWidth = 6;
             this.Ghichu.Name = "Ghichu";
             this.Ghichu.Width = 125;
             // 
-            // cbbDoibong
+            // label2
             // 
-            this.cbbDoibong.BackColor = System.Drawing.Color.Transparent;
-            this.cbbDoibong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbDoibong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbDoibong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbDoibong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbDoibong.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbDoibong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbDoibong.ItemHeight = 30;
-            this.cbbDoibong.Location = new System.Drawing.Point(660, 12);
-            this.cbbDoibong.Name = "cbbDoibong";
-            this.cbbDoibong.Size = new System.Drawing.Size(249, 36);
-            this.cbbDoibong.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(47, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tìm kiếm";
             // 
-            // label1
+            // txtSearch
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(564, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Đội Bóng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(11, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(294, 39);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tra cứu đội bóng";
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
+            this.txtSearch.Location = new System.Drawing.Point(157, 11);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(419, 30);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // FormSearch
             // 
@@ -273,7 +307,8 @@
             this.pnlContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoibong)).EndInit();
             this.ResumeLayout(false);
 
@@ -285,17 +320,19 @@
         private System.Windows.Forms.TabPage tbpDoibong;
         private System.Windows.Forms.TabPage tbpCauthu;
         private System.Windows.Forms.Panel pnlContainer;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgvDoibong;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbDoibong;
+        private System.Windows.Forms.DataGridView dgvDoibong;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn CauThu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiCauThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Doi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ghichu;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbDoibong;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label2;
     }
 }
