@@ -38,9 +38,7 @@
             this.optTracuu = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.optQuyDinh = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.optQuanligiai = new Guna.UI2.WinForms.Guna2PictureBox();
             this.optDangXuat = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.optBaoCao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optTracuu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optQuyDinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.optQuanligiai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optDangXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,9 +67,7 @@
             this.panel1.Controls.Add(this.optTracuu);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.optQuyDinh);
-            this.panel1.Controls.Add(this.optQuanligiai);
             this.panel1.Controls.Add(this.optDangXuat);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
@@ -88,11 +83,12 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(603, 111);
+            this.label10.Location = new System.Drawing.Point(525, 111);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 23);
             this.label10.TabIndex = 32;
@@ -100,9 +96,10 @@
             // 
             // optTrandau
             // 
+            this.optTrandau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.optTrandau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.optTrandau.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.quabong;
-            this.optTrandau.Location = new System.Drawing.Point(593, 36);
+            this.optTrandau.Location = new System.Drawing.Point(515, 36);
             this.optTrandau.Name = "optTrandau";
             this.optTrandau.Size = new System.Drawing.Size(118, 69);
             this.optTrandau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,11 +108,12 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(840, 111);
+            this.label9.Location = new System.Drawing.Point(762, 111);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 23);
             this.label9.TabIndex = 30;
@@ -123,9 +121,10 @@
             // 
             // optBaoCao
             // 
+            this.optBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.optBaoCao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.optBaoCao.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.baocao;
-            this.optBaoCao.Location = new System.Drawing.Point(833, 34);
+            this.optBaoCao.Location = new System.Drawing.Point(755, 34);
             this.optBaoCao.Name = "optBaoCao";
             this.optBaoCao.Size = new System.Drawing.Size(105, 74);
             this.optBaoCao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,21 +133,23 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(729, 111);
+            this.label8.Location = new System.Drawing.Point(651, 111);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 23);
+            this.label8.Size = new System.Drawing.Size(79, 23);
             this.label8.TabIndex = 28;
-            this.label8.Text = "TRA CỨU";
+            this.label8.Text = "QUẢN LÍ";
             // 
             // optTracuu
             // 
+            this.optTracuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.optTracuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.optTracuu.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.search;
-            this.optTracuu.Location = new System.Drawing.Point(733, 36);
+            this.optTracuu.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.hoso;
+            this.optTracuu.Location = new System.Drawing.Point(655, 36);
             this.optTracuu.Name = "optTracuu";
             this.optTracuu.Size = new System.Drawing.Size(73, 72);
             this.optTracuu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,11 +159,12 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(965, 110);
+            this.label7.Location = new System.Drawing.Point(887, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 23);
             this.label7.TabIndex = 26;
@@ -170,34 +172,24 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(1081, 109);
+            this.label6.Location = new System.Drawing.Point(1003, 109);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 23);
             this.label6.TabIndex = 25;
             this.label6.Text = "ĐĂNG XUẤT";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(463, 111);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 23);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "QUẢN LÝ GIẢI";
-            // 
             // optQuyDinh
             // 
+            this.optQuyDinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.optQuyDinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.optQuyDinh.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.rule;
             this.optQuyDinh.ImageRotate = 0F;
-            this.optQuyDinh.Location = new System.Drawing.Point(966, 18);
+            this.optQuyDinh.Location = new System.Drawing.Point(888, 18);
             this.optQuyDinh.Margin = new System.Windows.Forms.Padding(4);
             this.optQuyDinh.Name = "optQuyDinh";
             this.optQuyDinh.Size = new System.Drawing.Size(87, 99);
@@ -205,27 +197,14 @@
             this.optQuyDinh.TabIndex = 2;
             this.optQuyDinh.TabStop = false;
             // 
-            // optQuanligiai
-            // 
-            this.optQuanligiai.BackColor = System.Drawing.Color.Transparent;
-            this.optQuanligiai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.optQuanligiai.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.hoso;
-            this.optQuanligiai.ImageRotate = 0F;
-            this.optQuanligiai.Location = new System.Drawing.Point(490, 35);
-            this.optQuanligiai.Margin = new System.Windows.Forms.Padding(4);
-            this.optQuanligiai.Name = "optQuanligiai";
-            this.optQuanligiai.Size = new System.Drawing.Size(81, 70);
-            this.optQuanligiai.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.optQuanligiai.TabIndex = 2;
-            this.optQuanligiai.TabStop = false;
-            // 
             // optDangXuat
             // 
+            this.optDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.optDangXuat.BackColor = System.Drawing.Color.Transparent;
             this.optDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.optDangXuat.Image = global::CNPM_DoAn_Nhom2.Properties.Resources.logoutt;
             this.optDangXuat.ImageRotate = 0F;
-            this.optDangXuat.Location = new System.Drawing.Point(1100, 35);
+            this.optDangXuat.Location = new System.Drawing.Point(1022, 35);
             this.optDangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.optDangXuat.Name = "optDangXuat";
             this.optDangXuat.Size = new System.Drawing.Size(77, 70);
@@ -310,6 +289,7 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1203, 587);
             this.pnlMain.TabIndex = 2;
+            
             // 
             // Form1
             // 
@@ -331,7 +311,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.optBaoCao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.optTracuu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.optQuyDinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.optQuanligiai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.optDangXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -348,9 +327,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox optDangXuat;
-        private Guna.UI2.WinForms.Guna2PictureBox optQuanligiai;
         private Guna.UI2.WinForms.Guna2PictureBox optQuyDinh;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;

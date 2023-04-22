@@ -53,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCauThuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCauThuForm.Designer.cs">
+      <DependentUpon>AddCauThuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDoiBongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDoiBongForm.Designer.cs">
+      <DependentUpon>AddDoiBongForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +77,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSearch.cs">
+    <Compile Include="ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSearch.Designer.cs">
-      <DependentUpon>FormSearch.cs</DependentUpon>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IntroForm.cs">
       <SubType>Form</SubType>
@@ -95,11 +107,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLBD.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCauThuForm.resx">
+      <DependentUpon>AddCauThuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDoiBongForm.resx">
+      <DependentUpon>AddDoiBongForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSearch.resx">
-      <DependentUpon>FormSearch.cs</DependentUpon>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IntroForm.resx">
       <DependentUpon>IntroForm.cs</DependentUpon>

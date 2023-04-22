@@ -38,7 +38,6 @@ E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\bin\Debug\Guna.UI2.dll
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.csproj.AssemblyReference.cache
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.csproj.SuggestedBindingRedirects.cache
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.ForgetPassword.resources
-E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.FormSearch.resources
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.IntroForm.resources
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.LoginForm.resources
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.Form1.resources
@@ -48,3 +47,6 @@ E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.csproj.CoreCompileInpu
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.csproj.CopyComplete
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.exe
 E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.pdb
+E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.ManagerForm.resources
+E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.AddDoiBongForm.resources
+E:\DoAn\GK_CNPM\CNPM_DoAn_Nhom2\obj\Debug\CNPM_DoAn_Nhom2.AddCauThuForm.resources

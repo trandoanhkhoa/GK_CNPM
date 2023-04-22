@@ -34,7 +34,9 @@ namespace CNPM_DoAn_Nhom2
         }
         private void optTracuu_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormSearch());
+            OpenChildForm(new ManagerForm());
         }
+
+        
     }
 }
