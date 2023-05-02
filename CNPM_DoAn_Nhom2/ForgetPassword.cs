@@ -63,12 +63,12 @@ namespace CNPM_DoAn_Nhom2
                     Account account = db.Accounts.SingleOrDefault(u=>u.UserName==txtUser.Text.Trim());
                     account.Password = txtNewPassword.Text;
                     db.SubmitChanges();
-                    MessageBox.Show("Cập nhật mật khẩu mới thành công !");
+                    MessageBox.Show("Cập nhật mật khẩu mới thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
                 }
                 else
                 {
-                    MessageBox.Show("Mật khẩu phải chứa ít nhất 6 kí tự !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mật khẩu phải chứa ít nhất 6 kí tự !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }    
             }
@@ -83,7 +83,7 @@ namespace CNPM_DoAn_Nhom2
         {
             if(string.IsNullOrEmpty(txtUser.Text))
             {
-                MessageBox.Show("Vui lòng điền thông tin tài khoản", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng điền thông tin tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
@@ -91,7 +91,7 @@ namespace CNPM_DoAn_Nhom2
                 Account account = db.Accounts.SingleOrDefault(a => a.UserName == txtUser.Text.Trim());
                 if(account == null)
                 {
-                    MessageBox.Show("Tài khoản không tồn tại !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tài khoản không tồn tại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return; 
                 }
                 try
