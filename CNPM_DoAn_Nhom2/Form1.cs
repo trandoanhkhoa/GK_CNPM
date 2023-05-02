@@ -37,6 +37,9 @@ namespace CNPM_DoAn_Nhom2
             OpenChildForm(new ManagerForm());
         }
 
-        
+        private void optDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

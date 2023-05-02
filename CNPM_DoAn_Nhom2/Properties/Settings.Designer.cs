@@ -32,5 +32,15 @@ namespace CNPM_DoAn_Nhom2.Properties {
                 return ((string)(this["QL_DOI_BONGConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-C0FC3VE;Initial Catalog=QL_DOI_BONG;Integrated Security=True")]
+        public string QL_DOI_BONGConnectionString1 {
+            get {
+                return ((string)(this["QL_DOI_BONGConnectionString1"]));
+            }
+        }
     }
 }

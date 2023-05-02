@@ -39,7 +39,7 @@ namespace CNPM_DoAn_Nhom2
     #endregion
 		
 		public QLBDDataContext() : 
-				base(global::CNPM_DoAn_Nhom2.Properties.Settings.Default.QL_DOI_BONGConnectionString, mappingSource)
+				base(global::CNPM_DoAn_Nhom2.Properties.Settings.Default.QL_DOI_BONGConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -81,6 +81,14 @@ namespace CNPM_DoAn_Nhom2
 			get
 			{
 				return this.GetTable<tbl_Doi_Bong>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Account> Accounts
+		{
+			get
+			{
+				return this.GetTable<Account>();
 			}
 		}
 	}
@@ -467,6 +475,69 @@ namespace CNPM_DoAn_Nhom2
 		{
 			this.SendPropertyChanging();
 			entity.tbl_Doi_Bong = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Account")]
+	public partial class Account
+	{
+		
+		private string _UserName;
+		
+		private string _Password;
+		
+		private string _Email;
+		
+		public Account()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(50)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this._UserName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="NVarChar(50)")]
+		public string Password
+		{
+			get
+			{
+				return this._Password;
+			}
+			set
+			{
+				if ((this._Password != value))
+				{
+					this._Password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(50)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
 		}
 	}
 }

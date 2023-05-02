@@ -21,5 +21,11 @@
         <classShapeMoniker Id="8a30f841-d641-4212-b9ca-72663b1a9420" />
       </nodes>
     </associationConnector>
+    <classShape Id="c150d2bf-7646-4b42-87fc-fb93559ad3e2" absoluteBounds="3.125, 3.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/QLBDDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0428d15-5970-441d-9fc5-e56ef02470eb" absoluteBounds="3.14, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

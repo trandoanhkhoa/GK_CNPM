@@ -40,7 +40,7 @@
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.chkShowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.btnForgetPassword = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCheck = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +76,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(412, 450);
             this.guna2Panel1.TabIndex = 0;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // label4
             // 
@@ -124,7 +123,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2HtmlLabel7
             // 
@@ -143,7 +141,7 @@
             this.txtUserName.BorderRadius = 5;
             this.txtUserName.BorderThickness = 2;
             this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserName.DefaultText = "haitlc";
+            this.txtUserName.DefaultText = "ChiHai";
             this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -160,7 +158,8 @@
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(339, 32);
             this.txtUserName.TabIndex = 7;
-            this.txtUserName.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // txtPassword
             // 
@@ -168,7 +167,7 @@
             this.txtPassword.BorderRadius = 5;
             this.txtPassword.BorderThickness = 2;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "*********";
+            this.txtPassword.DefaultText = "HaiNgonLam";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -185,27 +184,29 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(339, 32);
             this.txtPassword.TabIndex = 8;
+            this.txtPassword.TextChanged += new System.EventHandler(this.HaiDepZai);
             // 
-            // guna2CheckBox1
+            // chkShowPassword
             // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 1;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guna2CheckBox1.CheckMarkColor = System.Drawing.Color.Black;
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CheckBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2CheckBox1.Location = new System.Drawing.Point(658, 253);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(125, 21);
-            this.guna2CheckBox1.TabIndex = 9;
-            this.guna2CheckBox1.Text = "Show Password";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.Black;
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 1;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.CheckedState.BorderColor = System.Drawing.Color.Black;
+            this.chkShowPassword.CheckedState.BorderRadius = 0;
+            this.chkShowPassword.CheckedState.BorderThickness = 1;
+            this.chkShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.chkShowPassword.CheckMarkColor = System.Drawing.Color.Black;
+            this.chkShowPassword.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.chkShowPassword.Location = new System.Drawing.Point(658, 253);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(125, 21);
+            this.chkShowPassword.TabIndex = 9;
+            this.chkShowPassword.Text = "Show Password";
+            this.chkShowPassword.UncheckedState.BorderColor = System.Drawing.Color.Black;
+            this.chkShowPassword.UncheckedState.BorderRadius = 0;
+            this.chkShowPassword.UncheckedState.BorderThickness = 1;
+            this.chkShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.chkShowPassword.UseVisualStyleBackColor = false;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -224,7 +225,7 @@
             this.btnLogin.Size = new System.Drawing.Size(339, 45);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "LOG IN";
-            this.btnLogin.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnReset
             // 
@@ -242,6 +243,7 @@
             this.btnReset.Size = new System.Drawing.Size(109, 34);
             this.btnReset.TabIndex = 11;
             this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnForgetPassword
             // 
@@ -261,7 +263,7 @@
             this.btnForgetPassword.Size = new System.Drawing.Size(192, 34);
             this.btnForgetPassword.TabIndex = 12;
             this.btnForgetPassword.Text = "Forget Password";
-            this.btnForgetPassword.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnForgetPassword.Click += new System.EventHandler(this.btnForgetPassword_Click);
             // 
             // guna2ControlBox1
             // 
@@ -278,6 +280,7 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 32);
             this.guna2ControlBox1.TabIndex = 13;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // label1
             // 
@@ -315,24 +318,24 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Password";
             // 
-            // label7
+            // lblCheck
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(441, 253);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 17);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Accout not correct !";
+            this.lblCheck.AutoSize = true;
+            this.lblCheck.BackColor = System.Drawing.Color.Transparent;
+            this.lblCheck.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheck.ForeColor = System.Drawing.Color.Red;
+            this.lblCheck.Location = new System.Drawing.Point(441, 253);
+            this.lblCheck.Name = "lblCheck";
+            this.lblCheck.Size = new System.Drawing.Size(0, 17);
+            this.lblCheck.TabIndex = 19;
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 450);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblCheck);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -340,7 +343,7 @@
             this.Controls.Add(this.btnForgetPassword);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.guna2CheckBox1);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.guna2HtmlLabel7);
@@ -368,7 +371,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private Guna.UI2.WinForms.Guna2CheckBox chkShowPassword;
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Button btnForgetPassword;
@@ -379,7 +382,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCheck;
     }
 }
 

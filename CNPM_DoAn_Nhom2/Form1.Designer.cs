@@ -211,6 +211,7 @@
             this.optDangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.optDangXuat.TabIndex = 23;
             this.optDangXuat.TabStop = false;
+            this.optDangXuat.Click += new System.EventHandler(this.optDangXuat_Click);
             // 
             // label2
             // 
@@ -289,7 +290,6 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1203, 587);
             this.pnlMain.TabIndex = 2;
-            
             // 
             // Form1
             // 
