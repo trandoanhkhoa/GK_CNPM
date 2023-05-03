@@ -105,6 +105,7 @@
             this.optTrandau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.optTrandau.TabIndex = 31;
             this.optTrandau.TabStop = false;
+            this.optTrandau.Click += new System.EventHandler(this.optTrandau_Click);
             // 
             // label9
             // 

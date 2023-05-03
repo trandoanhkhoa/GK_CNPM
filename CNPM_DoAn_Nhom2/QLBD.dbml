@@ -8,7 +8,7 @@
       <Column Name="Doi" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="LoaiCauthu" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="TongSoBanThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="GhiChu" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Association Name="tbl_Doi_Bong_tbl_Cauthu" Member="tbl_Doi_Bong" ThisKey="Doi" OtherKey="ID" Type="tbl_Doi_Bong" IsForeignKey="true" />
     </Type>
   </Table>
@@ -18,6 +18,19 @@
       <Column Name="Ten_Doi_Bong" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="Ten_San_nha" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Association Name="tbl_Doi_Bong_tbl_Cauthu" Member="tbl_Cauthus" ThisKey="ID" OtherKey="Doi" Type="tbl_Cauthu" />
+      <Association Name="tbl_Doi_Bong_tbl_Lichthidau" Member="tbl_Lichthidaus" ThisKey="ID" OtherKey="Doi1" Type="tbl_Lichthidau" />
+      <Association Name="tbl_Doi_Bong_tbl_Lichthidau1" Member="tbl_Lichthidaus1" ThisKey="ID" OtherKey="Doi2" Type="tbl_Lichthidau" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Lichthidau" Member="tbl_Lichthidaus">
+    <Type Name="tbl_Lichthidau">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Doi1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Doi2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayGio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TenSan" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="tbl_Doi_Bong_tbl_Lichthidau" Member="tbl_Doi_Bong" ThisKey="Doi1" OtherKey="ID" Type="tbl_Doi_Bong" IsForeignKey="true" />
+      <Association Name="tbl_Doi_Bong_tbl_Lichthidau1" Member="tbl_Doi_Bong1" ThisKey="Doi2" OtherKey="ID" Type="tbl_Doi_Bong" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Account" Member="Accounts">

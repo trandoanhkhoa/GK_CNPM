@@ -37,9 +37,15 @@ namespace CNPM_DoAn_Nhom2
             OpenChildForm(new ManagerForm());
         }
 
+<<<<<<< HEAD
+        private void optTrandau_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MatchForm());
+=======
         private void optDangXuat_Click(object sender, EventArgs e)
         {
             this.Dispose();
+>>>>>>> 0bd34f02936730b19d9423316669095fe41b9174
         }
     }
 }

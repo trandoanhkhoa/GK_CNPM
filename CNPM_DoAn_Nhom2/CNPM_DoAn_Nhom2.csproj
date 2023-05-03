@@ -65,6 +65,18 @@
     <Compile Include="AddDoiBongForm.Designer.cs">
       <DependentUpon>AddDoiBongForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMatchForm.Designer.cs">
+      <DependentUpon>AddMatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDoiBongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDoiBongForm.Designer.cs">
+      <DependentUpon>ChangeDoiBongForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchForm.Designer.cs">
+      <DependentUpon>MatchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -107,11 +125,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLBD.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ResultMatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultMatchForm.Designer.cs">
+      <DependentUpon>ResultMatchForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCauThuForm.resx">
       <DependentUpon>AddCauThuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddDoiBongForm.resx">
       <DependentUpon>AddDoiBongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMatchForm.resx">
+      <DependentUpon>AddMatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDoiBongForm.resx">
+      <DependentUpon>ChangeDoiBongForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
@@ -128,10 +158,16 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MatchForm.resx">
+      <DependentUpon>MatchForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultMatchForm.resx">
+      <DependentUpon>ResultMatchForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
